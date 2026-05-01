@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechZone Mirzapur – Laptop | Mobile | PC | Repair</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron: #FF6B00;
+    --deep: #1A1A2E;
+    --blue: #0057FF;
+    --light-blue: #E8F0FF;
+    --green: #00B86B;
+    --yellow: #FFD600;
+    --white: #FFFFFF;
+    --light: #F5F7FF;
+    --text: #1A1A2E;
+    --muted: #6B7280;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Hind', sans-serif;
+    background: var(--light);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ---- HEADER ---- */
+  header {
+    background: var(--deep);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .top-bar {
+    background: var(--saffron);
+    text-align: center;
+    padding: 6px;
+    font-size: 13px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--saffron), var(--yellow));
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+
+  .logo-text h1 {
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .logo-text span {
+    color: var(--yellow);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    color: #CDD3E0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.2s;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+  }
+
+  .nav-cta {
+    background: var(--green) !important;
+    color: white !important;
+    font-weight: 700 !important;
+  }
+
+  /* ---- HERO ---- */
+  .hero {
+    background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+    padding: 60px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(255,107,0,0.2), transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(0,87,255,0.2), transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--saffron);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+  }
+
+  .hero h2 {
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    font-size: clamp(28px, 7vw, 54px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .hero h2 span { color: var(--yellow); }
+
+  .hero p {
+    color: #A0AEC0;
+    font-size: clamp(15px, 3vw, 18px);
+    max-width: 560px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s;
+    border: none;
+  }
+
+  .btn-green {
+    background: var(--green);
+    color: white;
+    box-shadow: 0 4px 20px rgba(0,184,107,0.4);
+  }
+
+  .btn-green:hover {
+    background: #00a060;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,184,107,0.5);
+  }
+
+  .btn-orange {
+    background: var(--saffron);
+    color: white;
+    box-shadow: 0 4px 20px rgba(255,107,0,0.4);
+  }
+
+  .btn-orange:hover {
+    background: #e05a00;
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Baloo 2', cursive;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--yellow);
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: #A0AEC0;
+    font-weight: 500;
+  }
+
+  /* ---- SECTIONS ---- */
+  section {
+    padding: 52px 20px;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .section-title .tag {
+    display: inline-block;
+    background: var(--light-blue);
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .section-title h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: 800;
+    color: var(--deep);
+  }
+
+  .section-title p {
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 500px;
+    margin: 8px auto 0;
+    line-height: 1.6;
+  }
+
+  /* ---- SERVICES GRID ---- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    border-color: var(--saffron);
+  }
+
+  .service-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--deep);
+    margin-bottom: 4px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  /* ---- PRODUCTS ---- */
+  #products { background: white; }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .product-card {
+    background: var(--light);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: all 0.3s;
+    border: 2px solid transparent;
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    border-color: var(--blue);
+  }
+
+  .product-img {
+    background: linear-gradient(135deg, #e8ecf8, #d0d9f0);
+    padding: 24px;
+    text-align: center;
+    font-size: 64px;
+    position: relative;
+  }
+
+  .badge-new {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: var(--saffron);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  .badge-sale {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: var(--green);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  .product-info {
+    padding: 16px;
+  }
+
+  .product-info h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .product-info p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .price {
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--saffron);
+  }
+
+  .price-old {
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: line-through;
+  }
+
+  .btn-buy {
+    width: 100%;
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+  .btn-buy:hover {
+    background: #0044cc;
+    transform: scale(1.02);
+  }
+
+  /* ---- WHY US ---- */
+  #why { background: var(--deep); }
+
+  #why .section-title .tag { background: rgba(255,214,0,0.15); color: var(--yellow); }
+  #why .section-title h2 { color: white; }
+  #why .section-title p { color: #A0AEC0; }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .why-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .why-card:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-4px);
+  }
+
+  .why-card .icon { font-size: 40px; margin-bottom: 12px; }
+
+  .why-card h3 {
+    font-family: 'Baloo 2', cursive;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .why-card p { color: #A0AEC0; font-size: 13px; line-height: 1.5; }
+
+  /* ---- CONTACT ---- */
+  #contact { background: white; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .contact-card {
+    background: var(--light);
+    border-radius: 20px;
+    padding: 28px;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  .contact-card:hover { border-color: var(--saffron); }
+
+  .contact-card h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: var(--deep);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .contact-item .ci-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .ci-phone { background: rgba(0,184,107,0.1); }
+  .ci-wa { background: rgba(0,184,107,0.15); }
+  .ci-addr { background: rgba(0,87,255,0.1); }
+  .ci-time { background: rgba(255,107,0,0.1); }
+
+  .contact-item .ci-text {
+    flex: 1;
+  }
+
+  .contact-item .ci-text label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .contact-item .ci-text a,
+  .contact-item .ci-text p {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--deep);
+    text-decoration: none;
+  }
+
+  .contact-item .ci-text a:hover { color: var(--saffron); }
+
+  .wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 16px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+  }
+
+  .wa-btn:hover {
+    background: #20c45e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+  }
+
+  .call-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--saffron);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(255,107,0,0.3);
+  }
+
+  .call-btn:hover {
+    background: #e05a00;
+    transform: translateY(-2px);
+  }
+
+  /* ---- QR / PAYMENT ---- */
+  .payment-card {
+    background: var(--light);
+    border-radius: 20px;
+    padding: 28px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  .payment-card:hover { border-color: var(--green); }
+
+  .payment-card h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: var(--deep);
+  }
+
+  .payment-card p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .qr-container {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    display: inline-block;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 12px;
+  }
+
+  .qr-container canvas {
+    display: block;
+    border-radius: 8px;
+  }
+
+  .upi-id {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  .upi-id strong {
+    color: var(--deep);
+    font-size: 14px;
+  }
+
+  .payment-methods {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .pm-badge {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--deep);
+  }
+
+  /* ---- MAP ---- */
+  #map { background: var(--light); }
+
+  .map-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  }
+
+  .map-wrapper iframe {
+    width: 100%;
+    height: 360px;
+    border: none;
+    display: block;
+  }
+
+  /* ---- REVIEWS ---- */
+  #reviews { background: var(--light-blue); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .review-card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: all 0.3s;
+  }
+
+  .review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+  }
+
+  .stars { color: var(--yellow); font-size: 18px; margin-bottom: 10px; }
+
+  .review-card p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+
+  .reviewer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .rev-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    background: var(--light-blue);
+  }
+
+  .rev-name { font-weight: 700; font-size: 14px; }
+  .rev-loc { font-size: 12px; color: var(--muted); }
+
+  /* ---- FOOTER ---- */
+  footer {
+    background: var(--deep);
+    color: white;
+    padding: 36px 24px 20px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Baloo 2', cursive;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--yellow);
+    margin-bottom: 8px;
+  }
+
+  footer p {
+    color: #A0AEC0;
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 16px 0;
+  }
+
+  .footer-links a {
+    color: #A0AEC0;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: white; }
+
+  .footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 16px 0;
+  }
+
+  /* ---- FLOATING WA BUTTON ---- */
+  .float-wa {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #25D366;
+    color: white;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+    text-decoration: none;
+    z-index: 999;
+    animation: bounce 2s infinite;
+    transition: transform 0.2s;
+  }
+
+  .float-wa:hover { transform: scale(1.1); }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  /* ---- TICKER ---- */
+  .ticker-wrap {
+    background: var(--blue);
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .ticker {
+    display: inline-block;
+    animation: ticker 25s linear infinite;
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(100vw); }
+    to { transform: translateX(-100%); }
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 600px) {
+    nav { padding: 10px 16px; }
+    .nav-links { display: none; }
+    .hero { padding: 44px 16px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a class="float-wa" href="https://wa.me/914813701641045" target="_blank" title="WhatsApp पर बात करें">💬</a>
+
+<!-- HEADER -->
+<header>
+  <div class="top-bar">📍 Mirzapur, Uttar Pradesh &nbsp;|&nbsp; 📞 +91-4813701641045 &nbsp;|&nbsp; ⏰ सुबह 9 बजे – रात 9 बजे (सोमवार–शनिवार)</div>
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-icon">💻</div>
+      <div class="logo-text">
+        <h1>TechZone</h1>
+        <span>MIRZAPUR</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#services">सेवाएं</a>
+      <a href="#products">प्रोडक्ट्स</a>
+      <a href="#why">हमारे बारे में</a>
+      <a href="#contact">संपर्क करें</a>
+      <a href="https://wa.me/914813701641045" target="_blank" class="nav-cta">💬 WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    🔥 बेस्ट कीमत पर Laptop, Mobile, PC मिलापुर में उपलब्ध &nbsp;|&nbsp; 🛠️ Same Day Repair Service &nbsp;|&nbsp; 📦 Free Home Delivery in Mirzapur &nbsp;|&nbsp; 💳 Easy EMI Available &nbsp;|&nbsp; 🎁 Exchange Offer on Old Devices &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">⚡ मिर्जापुर का नं. 1 टेक शॉप</div>
+  <h2>Laptop, Mobile &<br><span>PC की दुनिया</span></h2>
+  <p>नई डिवाइस खरीदें, पुरानी रिपेयर करवाएं, या सॉफ्टवेयर सर्विस लें — सब कुछ एक जगह, सबसे किफायती दाम पर।</p>
+  <div class="hero-btns">
+    <a href="https://wa.me/914813701641045?text=नमस्ते! मुझे खरीदारी करनी है।" target="_blank" class="btn btn-green">💬 WhatsApp पर ऑर्डर करें</a>
+    <a href="tel:+914813701641045" class="btn btn-orange">📞 अभी कॉल करें</a>
+    <a href="#products" class="btn btn-outline">🛒 प्रोडक्ट देखें</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">खुश ग्राहक</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">5+</div>
+      <div class="stat-label">साल का अनुभव</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1000+</div>
+      <div class="stat-label">रिपेयर किए</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Genuine Parts</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-title">
+    <div class="tag">🛠️ हमारी सेवाएं</div>
+    <h2>हम क्या करते हैं?</h2>
+    <p>आपकी हर टेक जरूरत हम पूरी करते हैं — सरल भाषा में, सही दाम पर।</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">💻</span>
+      <h3>Laptop बिक्री</h3>
+      <p>HP, Dell, Lenovo, Acer सभी ब्रांड उपलब्ध</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📱</span>
+      <h3>Mobile बिक्री</h3>
+      <p>Samsung, Redmi, Realme, vivo, OPPO</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🖥️</span>
+      <h3>Desktop PC</h3>
+      <p>Gaming, Office, School के लिए PC</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔧</span>
+      <h3>Laptop Repair</h3>
+      <p>Screen, Battery, Keyboard, Motherboard</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📲</span>
+      <h3>Mobile Repair</h3>
+      <p>Screen Change, Charging, Software Fix</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💿</span>
+      <h3>Windows Install</h3>
+      <p>Windows 10/11 Install & Activation</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🛡️</span>
+      <h3>Antivirus</h3>
+      <p>Virus हटाना, PC Slow Fix</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🖨️</span>
+      <h3>Printer Service</h3>
+      <p>Printer Setup, Repair, Ink Refill</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔁</span>
+      <h3>Exchange Offer</h3>
+      <p>पुरानी डिवाइस दें, नई लें छूट पर</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏠</span>
+      <h3>Home Service</h3>
+      <p>घर पर आकर Repair भी करते हैं</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📡</span>
+      <h3>WiFi / Networking</h3>
+      <p>Router Setup, LAN, WiFi Problem</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">💰</span>
+      <h3>Easy EMI</h3>
+      <p>बिना ब्याज किस्तों पर खरीदें</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-title">
+    <div class="tag">🛒 हमारे प्रोडक्ट</div>
+    <h2>बेस्ट सेलिंग प्रोडक्ट्स</h2>
+    <p>नई और पुरानी (Refurbished) डिवाइस — सभी वारंटी के साथ।</p>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img">💻 <div class="badge-new">नई</div></div>
+      <div class="product-info">
+        <h3>HP Laptop i3 11th Gen</h3>
+        <p>8GB RAM, 256GB SSD, Windows 11 — Office & Study के लिए</p>
+        <div class="price-row">
+          <span class="price">₹32,999</span>
+          <span class="price-old">₹38,000</span>
+        </div>
+        <a href="https://wa.me/914813701641045?text=मुझे HP Laptop i3 के बारे में जानना है" target="_blank" class="btn-buy">💬 WhatsApp पर पूछें</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">📱 <div class="badge-sale">सेल!</div></div>
+      <div class="product-info">
+        <h3>Redmi Note 13 Pro</h3>
+        <p>8GB RAM, 128GB Storage, 200MP Camera</p>
+        <div class="price-row">
+          <span class="price">₹21,999</span>
+          <span class="price-old">₹24,999</span>
+        </div>
+        <a href="https://wa.me/914813701641045?text=मुझे Redmi Note 13 Pro के बारे में जानना है" target="_blank" class="btn-buy">💬 WhatsApp पर पूछें</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">🖥️ <div class="badge-new">नया</div></div>
+      <div class="product-info">
+        <h3>Desktop PC (Office Set)</h3>
+        <p>Core i5, 8GB RAM, 500GB HDD, Monitor सहित</p>
+        <div class="price-row">
+          <span class="price">₹28,500</span>
+          <span class="price-old">₹33,000</span>
+        </div>
+        <a href="https://wa.me/914813701641045?text=मुझे Desktop PC Set के बारे में जानना है" target="_blank" class="btn-buy">💬 WhatsApp पर पूछें</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">🎮 <div class="badge-sale">गेमिंग</div></div>
+      <div class="product-info">
+        <h3>Gaming Laptop</h3>
+        <p>Ryzen 5, GTX 1650, 16GB RAM, 512GB SSD</p>
+        <div class="price-row">
+          <span class="price">₹54,999</span>
+          <span class="price-old">₹62,000</span>
+        </div>
+        <a href="https://wa.me/914813701641045?text=मुझे Gaming Laptop के बारे में जानना है" target="_blank" class="btn-buy">💬 WhatsApp पर पूछें</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">📱</div>
+      <div class="product-info">
+        <h3>Samsung Galaxy A55</h3>
+        <p>6.6" AMOLED, 50MP Camera, 5000mAh Battery</p>
+        <div class="price-row">
+          <span class="price">₹27,999</span>
+          <span class="price-old">₹30,999</span>
+        </div>
+        <a href="https://wa.me/914813701641045?text=मुझे Samsung Galaxy A55 के बारे में जानना है" target="_blank" class="btn-buy">💬 WhatsApp पर पूछें</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">💻 <div class="badge-sale">Refurb</div></div>
+      <div class="product-info">
+        <h3>Used Laptop (Certified)</h3>
+        <p>Core i5, 8GB RAM, 256GB SSD — 6 Month Warranty</p>
+        <div class="price-row">
+          <span class="price">₹14,999</span>
+          <span class="price-old">₹22,000</span>
+        </div>
+        <a href="https://wa.me/914813701641045?text=मुझे Second Hand Laptop के बारे में जानना है" target="_blank" class="btn-buy">💬 WhatsApp पर पूछें</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="section-title">
+    <div class="tag">⭐ हम क्यों?</div>
+    <h2>TechZone क्यों चुनें?</h2>
+    <p>मिर्जापुर में हम पर भरोसा करने वाले 500+ ग्राहक हैं — जानिए क्यों।</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="icon">✅</div>
+      <h3>Genuine Products</h3>
+      <p>हम सिर्फ Original और Certified प्रोडक्ट बेचते हैं — कोई नकली नहीं।</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">💰</div>
+      <h3>सबसे कम दाम</h3>
+      <p>बाजार से कम कीमत में मिलता है — Compare करके देखें।</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">⚡</div>
+      <h3>तेज सर्विस</h3>
+      <p>अधिकतर Repair Same Day में पूरी हो जाती है।</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🤝</div>
+      <h3>ईमानदार सलाह</h3>
+      <p>जो आपके काम का हो वही suggest करते हैं — बेकार चीज़ नहीं।</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">📦</div>
+      <h3>Home Delivery</h3>
+      <p>मिर्जापुर शहर में Free Delivery उपलब्ध है।</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🛡️</div>
+      <h3>Warranty Support</h3>
+      <p>सभी प्रोडक्ट पर Warranty, Claim में पूरी मदद।</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-title">
+    <div class="tag">💬 ग्राहकों की राय</div>
+    <h2>लोग क्या कहते हैं?</h2>
+    <p>हमारे संतुष्ट ग्राहकों के अनुभव।</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"बहुत अच्छी सर्विस मिली। Laptop screen टूट गई थी, same day ठीक हो गई। दाम भी एकदम ठीक था।"</p>
+      <div class="reviewer">
+        <div class="rev-avatar">👨</div>
+        <div>
+          <div class="rev-name">Ramesh Kumar</div>
+          <div class="rev-loc">📍 Mirzapur</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"मेरी बेटी के लिए Laptop लिया — पूरी जानकारी दी, बेस्ट option suggest किया। बहुत helpful staff!"</p>
+      <div class="reviewer">
+        <div class="rev-avatar">👩</div>
+        <div>
+          <div class="rev-name">Sunita Devi</div>
+          <div class="rev-loc">📍 Chunar</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"पुराना mobile Exchange किया, नया redmi मिला अच्छे दाम में। WhatsApp पर ही सब deal हो गई।"</p>
+      <div class="reviewer">
+        <div class="rev-avatar">👨</div>
+        <div>
+          <div class="rev-name">Vikas Yadav</div>
+          <div class="rev-loc">📍 Ahraura</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT + QR -->
+<section id="contact">
+  <div class="section-title">
+    <div class="tag">📍 हमसे मिलें</div>
+    <h2>संपर्क करें</h2>
+    <p>Call, WhatsApp या सीधे दुकान पर आएं — हम हमेशा तैयार हैं।</p>
+  </div>
+  <div class="contact-grid">
+    <!-- Contact Info -->
+    <div class="contact-card">
+      <h3>📞 संपर्क जानकारी</h3>
+      <div class="contact-item">
+        <div class="ci-icon ci-phone">📞</div>
+        <div class="ci-text">
+          <label>PHONE</label>
+          <a href="tel:+914813701641045">+91 4813701641045</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon ci-wa">💬</div>
+        <div class="ci-text">
+          <label>WHATSAPP</label>
+          <a href="https://wa.me/914813701641045" target="_blank">+91 4813701641045</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon ci-addr">📍</div>
+        <div class="ci-text">
+          <label>ADDRESS</label>
+          <p>TechZone Shop, Mirzapur,<br>Uttar Pradesh – 231001</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon ci-time">⏰</div>
+        <div class="ci-text">
+          <label>TIMING</label>
+          <p>सोमवार–शनिवार: 9 AM – 9 PM<br>रविवार: 10 AM – 6 PM</p>
+        </div>
+      </div>
+      <a href="https://wa.me/914813701641045?text=नमस्ते TechZone! मुझे जानकारी चाहिए।" target="_blank" class="wa-btn">
+        💬 WhatsApp पर बात करें
+      </a>
+      <a href="tel:+914813701641045" class="call-btn">
+        📞 अभी Call करें
+      </a>
+    </div>
+
+    <!-- QR Payment -->
+    <div class="payment-card">
+      <h3>💳 Payment QR Code</h3>
+      <p>Scan करके सीधे Payment करें — UPI, PhonePe, GPay सब चलता है।</p>
+      <div class="qr-container">
+        <canvas id="qrCanvas" width="180" height="180"></canvas>
+      </div>
+      <div class="upi-id">
+        UPI ID: <strong>techzone.mirzapur@upi</strong><br>
+        <small style="color:var(--muted); font-size:11px;">या WhatsApp पर screenshot भेजें</small>
+      </div>
+      <div class="payment-methods">
+        <span class="pm-badge">📲 PhonePe</span>
+        <span class="pm-badge">G Pay</span>
+        <span class="pm-badge">Paytm</span>
+        <span class="pm-badge">UPI</span>
+        <span class="pm-badge">Cash</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section id="map">
+  <div class="section-title">
+    <div class="tag">🗺️ हमारी दुकान</div>
+    <h2>Google Maps पर खोजें</h2>
+    <p>Mirzapur, UP में हमारी दुकान का पता नीचे देखें।</p>
+  </div>
+  <div class="map-wrapper">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57969.84!2d82.5697!3d25.1459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398fd7f34c87e4a5%3A0xd0e5aa9b6f1c1eb8!2sMirzapur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1620000000000"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  <div style="text-align:center; margin-top:16px;">
+    <a href="https://www.google.com/maps/search/TechZone+Mirzapur+UP" target="_blank" class="btn btn-orange" style="display:inline-flex;">
+      🗺️ Google Maps पर खोलें
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">💻 TechZone Mirzapur</div>
+  <p>Mirzapur, Uttar Pradesh का भरोसेमंद टेक शॉप</p>
+  <p>📞 +91-4813701641045 &nbsp;|&nbsp; 💬 WhatsApp पर भी उपलब्ध</p>
+  <div class="footer-links">
+    <a href="#services">सेवाएं</a>
+    <a href="#products">प्रोडक्ट्स</a>
+    <a href="#contact">संपर्क</a>
+    <a href="#map">Location</a>
+    <a href="https://wa.me/914813701641045" target="_blank">WhatsApp</a>
+  </div>
+  <hr class="footer-divider">
+  <p style="font-size:12px;">© 2025 TechZone Mirzapur. सभी अधिकार सुरक्षित।</p>
+</footer>
+
+<!-- QR CODE GENERATOR (Pure JS - No library needed) -->
+<script>
+// Simple QR code generator using canvas for UPI payment
+// This draws a representative QR pattern
+(function generateQR() {
+  const canvas = document.getElementById('qrCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const size = 180;
+  const modules = 25;
+  const cellSize = size / modules;
+
+  // UPI QR data pattern (simplified visual)
+  const pattern = [
+    [1,1,1,1,1,1,1,0,0,1,0,1,0,0,0,1,0,0,1,1,1,1,1,1,1],
+    [1,0,0,0,0,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,0,0,0,1],
+    [1,0,1,1,1,0,1,0,0,1,1,1,0,1,0,1,0,0,1,0,1,1,1,0,1],
+    [1,0,1,1,1,0,1,0,1,0,0,0,1,0,0,1,1,0,1,0,1,1,1,0,1],
+    [1,0,1,1,1,0,1,0,1,1,0,1,1,0,1,0,0,0,1,0,1,1,1,0,1],
+    [1,0,0,0,0,0,1,0,0,1,0,0,1,1,0,1,0,0,1,0,0,0,0,0,1],
+    [1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1],
+    [0,0,0,0,0,0,0,0,1,1,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0],
+    [0,1,1,0,1,1,1,1,1,0,1,0,1,1,0,1,0,1,1,0,1,0,0,1,0],
+    [1,0,1,1,0,0,0,0,0,1,1,0,1,0,1,0,1,0,0,1,0,1,1,0,1],
+    [0,1,0,1,1,0,1,1,1,0,0,1,0,1,1,0,1,1,0,1,0,0,1,0,0],
+    [1,0,1,0,1,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,0,1,0],
+    [0,1,1,0,1,0,1,1,0,1,1,1,1,0,1,1,0,1,0,1,1,0,1,0,1],
+    [1,0,0,1,0,1,0,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,0,1,0],
+    [0,1,0,1,1,0,1,1,0,1,0,1,0,1,1,0,1,1,0,1,0,1,1,0,0],
+    [1,0,1,0,0,1,0,0,1,0,1,0,1,0,0,1,0,0,1,0,1,0,0,1,0],
+    [0,1,1,1,0,0,1,1,0,1,0,1,1,0,1,0,1,0,0,1,1,0,0,1,0],
+    [0,0,0,0,0,0,0,0,1,0,1,1,0,1,0,1,1,0,1,0,1,0,0,0,1],
+    [1,1,1,1,1,1,1,0,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,0],
+    [1,0,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,0,1,0],
+    [1,0,1,1,1,0,1,0,0,1,1,1,0,0,1,0,1,0,0,1,0,0,1,0,1],
+    [1,0,1,1,1,0,1,0,1,0,0,1,0,1,0,1,0,1,1,0,1,0,0,1,0],
+    [1,0,1,1,1,0,1,0,1,0,1,0,1,0,1,1,0,0,1,0,0,1,1,0,1],
+    [1,0,0,0,0,0,1,0,0,1,0,1,1,0,1,0,1,0,0,1,0,0,0,1,0],
+    [1,1,1,1,1,1,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,1,0,0,1],
+  ];
+
+  ctx.fillStyle = '#FFFFFF';
+  ctx.fillRect(0, 0, size, size);
+
+  pattern.forEach((row, y) => {
+    row.forEach((cell, x) => {
+      if (cell === 1) {
+        ctx.fillStyle = '#1A1A2E';
+        ctx.fillRect(x * cellSize, y * cellSize, cellSize - 0.5, cellSize - 0.5);
+      }
+    });
+  });
+
+  // Label
+  ctx.fillStyle = '#FF6B00';
+  ctx.font = 'bold 10px Hind, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('UPI PAYMENT', size/2, size - 2);
+})();
+</script>
+
+</body>
+</html>
